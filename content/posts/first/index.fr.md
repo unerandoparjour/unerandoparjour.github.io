@@ -29,19 +29,15 @@ Avant de lacer tes chaussures, petit décodage rapide des chemins français. C'e
 
 * **GR® (Grande Randonnée) :** Les fameuses longues traversées en mode aventurier. 🧭
   * *Le repère :* Un balisage **blanc + rouge** ⬜🟥 (impossible de le louper !)
-
-  Example : [Le fameux GR 20](https://www.ffrandonnee.fr/randonner/sentiers/gr-20-a-travers-la-montagne-corse)
+  * Exemple : [Le fameux GR 20](https://www.ffrandonnee.fr/randonner/sentiers/gr-20-a-travers-la-montagne-corse)
 
 * **GRP® (Grande Randonnée de Pays) :** Les boucles régionales pour découvrir un coin de fond en comble. 🔁
   * *Le repère :* Un mix **jaune + rouge** 🟨🟥
-
-  Exemple : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
-
+  * Exemple : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
 
 * **PR (Promenade et Randonnée) :** Les petites randos parfaites pour une sortie à la journée (ou un *sunset* après le taf !). 🎒
   * *Le repère :* Un trait **jaune** tout simple 🟨
-
-  Exemple : [Eze - Mont Bastide](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=359810&mb_titre=eze-mont-bastide)
+  * Exemple : [Eze - Mont Bastide](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=359810&mb_titre=eze-mont-bastide)
 
 ### 🛡️ Le label "Sentier Officiel", ça veut dire quoi ?
 

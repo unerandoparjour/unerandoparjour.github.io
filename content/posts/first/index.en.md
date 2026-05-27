@@ -29,19 +29,15 @@ Before you lace up your boots, here is a quick breakdown of French trail marking
 
 * **GR® (Grande Randonnée):** The famous long-distance treks for full-on adventurer mode. 🧭
   * *Marker :* A **white + red** stripe ⬜🟥 (impossible to miss!)
-
-  Example : [Le fameux GR 20](https://www.ffrandonnee.fr/randonner/sentiers/gr-20-a-travers-la-montagne-corse)
+  * Example : [Le fameux GR 20](https://www.ffrandonnee.fr/randonner/sentiers/gr-20-a-travers-la-montagne-corse)
 
 * **GRP® (Grande Randonnée de Pays):** Regional loops designed to let you discover a specific area inside out. 🔁
   * *Marker :* A **yellow + red** mix 🟨🟥
-
-  Example : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
-
+  * Example : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
 
 * **PR (Promenade et Randonnée):** Short day-hikes, perfect for a quick getaway (or a sunset walk after work!). 🎒
   * *Marker :* A single **yellow** stripe 🟨
-
-  Example : [Eze - Mont Bastide](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=359810&mb_titre=eze-mont-bastide)
+  * Example : [Eze - Mont Bastide](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=359810&mb_titre=eze-mont-bastide)
 
 ### 🛡️ What does the "Official Trail" label mean?
 

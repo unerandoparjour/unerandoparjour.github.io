@@ -31,18 +31,15 @@ cover: cover.jpg
 
 * **GR®（长距离徒步）:** 著名的长途穿越路线，适合冒险家。🧭
   * *标识：* **白+红** 条纹 ⬜🟥（绝对醒目！）
-
-  例子: [著名的GR 20](https://www.ffrandonnee.fr/randonner/sentiers/gr-20-a-travers-la-montagne-corse)
+  * 例子: [著名的GR 20](https://www.ffrandonnee.fr/randonner/sentiers/gr-20-a-travers-la-montagne-corse)
 
 * **GRP®（地区长距离步道）:** 区域环线，深入探索某个地方。🔁
   * *标识：* **黄+红** 组合 🟨🟥
-
-  例子: [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
+  * 例子: [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
 
 * **PR（短途徒步）:** 适合一天的轻松小路线（或下班后看个日落！）。🎒
   * *标识：* 单一**黄色**条纹 🟨
-
-  例子: [Eze - Mont Bastide](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=359810&mb_titre=eze-mont-bastide)
+  * 例子: [Eze - Mont Bastide](https://www.ffrandonnee.fr/randonner/idees-rando/vos-parcours-avec-l-appli-ma-rando?mb_page=circuit&mb_id=359810&mb_titre=eze-mont-bastide)
 
 ### 🛡️ “官方步道”标签意味着什么？
 
