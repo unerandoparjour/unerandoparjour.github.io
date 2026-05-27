@@ -22,6 +22,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: false
+
+      - name: Install Dream theme
+        run: |
+          rm -rf themes/dream
+          git clone --depth 1 --branch master https://github.com/g1eny0ung/hugo-theme-dream.git themes/dream
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
