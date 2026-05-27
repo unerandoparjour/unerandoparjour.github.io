@@ -35,7 +35,7 @@ Avant de lacer tes chaussures, petit décodage rapide des chemins français. C'e
 * **GRP® (Grande Randonnée de Pays) :** Les boucles régionales pour découvrir un coin de fond en comble. 🔁
   * *Le repère :* Un mix **jaune + rouge** 🟨🟥
 
-Exemple : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
+  Exemple : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
 
 
 * **PR (Promenade et Randonnée) :** Les petites randos parfaites pour une sortie à la journée (ou un *sunset* après le taf !). 🎒

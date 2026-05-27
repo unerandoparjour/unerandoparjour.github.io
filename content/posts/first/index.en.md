@@ -35,7 +35,7 @@ Before you lace up your boots, here is a quick breakdown of French trail marking
 * **GRP® (Grande Randonnée de Pays):** Regional loops designed to let you discover a specific area inside out. 🔁
   * *Marker :* A **yellow + red** mix 🟨🟥
 
-Example : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
+  Example : [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
 
 
 * **PR (Promenade et Randonnée):** Short day-hikes, perfect for a quick getaway (or a sunset walk after work!). 🎒

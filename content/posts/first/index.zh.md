@@ -37,7 +37,7 @@ cover: cover.jpg
 * **GRP®（地区长距离步道）:** 区域环线，深入探索某个地方。🔁
   * *标识：* **黄+红** 组合 🟨🟥
 
-例子: [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
+  例子: [GR® de pays Lou Camin Nissart](https://alpes-maritimes.ffrandonnee.fr/post/camin-nissart/)
 
 * **PR（短途徒步）:** 适合一天的轻松小路线（或下班后看个日落！）。🎒
   * *标识：* 单一**黄色**条纹 🟨
