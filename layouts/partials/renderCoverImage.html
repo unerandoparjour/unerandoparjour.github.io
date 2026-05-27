@@ -1,0 +1,31 @@
+{{- $page := .page -}}
+{{- $imgClass := .imgClass | default "" -}}
+{{- $name := $page.Params.cover -}}
+{{- if not $name -}}
+  {{- return -}}
+{{- end -}}
+{{- $r := $page.Resources.Get $name -}}
+{{- if not $r -}}
+  {{- $r = $page.Resources.GetMatch $name -}}
+{{- end -}}
+{{- if not $r -}}
+  {{- range $page.AllTranslations -}}
+    {{- if not $r -}}
+      {{- $r = .Resources.Get $name -}}
+    {{- end -}}
+    {{- if not $r -}}
+      {{- $r = .Resources.GetMatch $name -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $r -}}
+  {{- if eq .MediaType.SubType "svg" -}}
+    <img{{ with $imgClass }} class="{{ . }}"{{ end }} src="{{ .RelPermalink }}" alt="{{ $page.Title }}" />
+  {{- else -}}
+    {{- $webp := .Resize (printf "%dx%d webp" .Width .Height) -}}
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
+      <img{{ with $imgClass }} class="{{ . }}"{{ end }} src="{{ .RelPermalink }}" alt="{{ $page.Title }}" />
+    </picture>
+  {{- end -}}
+{{- end -}}

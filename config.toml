@@ -1,0 +1,79 @@
+baseURL = "https://unerandoparjour.github.io/"
+title = "Une rando par jour"
+theme = "dream"
+
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+[frontmatter]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[markup]
+[markup.highlight]
+noClasses = false
+[markup.goldmark.parser.attribute]
+block = true
+
+[params]
+
+lightTheme = "emerald"
+darkTheme = "forest"
+
+headerTitle = "Une rando par jour"
+author = "Xiaoou Wang"
+avatar = "img/personal/avatar.jpg"
+siteStartYear = 2026
+customSyntaxHighlighting = true
+# options
+stickyNav = true
+# reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
+# collapseNavItems = ["posts", "categories", "tags"]
+# noDefaultSummaryCover = true
+showTableOfContents = true
+showSummaryCoverInPost = true
+imageZoomableInPost = true
+showPrevNextPost = true
+
+favicon = "img/flavico.png"
+footerBottomText = "Xiaoou Wang"
+
+# Waline comments — both keys must live under [params]
+# Deploy backend: https://waline.js.org/en/guide/get-started/deploy.html
+# Use the stable Vercel production URL (not a one-off preview *.vercel.app link).
+waline = true
+walineServer = "https://waline-peach-omega.vercel.app"
+
+
+# utterancesRepo = "unerandoparjour/unerandoparjour.github.io"
+
+[languages]
+
+  [languages.fr]
+    locale = "fr-fr"
+    label = "Français"
+    weight = 1
+    title = "Une Rando Par Jour"
+    [languages.fr.params]
+      motto = "Mieux vaut partir que maudire la route"
+
+  [languages.zh]
+    locale = "zh-cn"
+    label = "中文"
+    weight = 2
+    title = "一日一山"
+    [languages.zh.params]
+      motto = "与其感慨路难行，不如马上出发"
+
+  [languages.en]
+    locale = "en-us"
+    label = "English"
+    weight = 3
+    title = "A hike a day"
+    [languages.en.params]
+      motto = "Don't dwell on the hard road — set out now."
+
+
+# Disqus (optional): uncomment after adding trusted domain at
+# https://disqus.com/admin/settings/advanced/ → unerandoparjour.github.io
+# [services]
+# [services.disqus]
+# shortname = "unerandoparjour"

@@ -1,0 +1,64 @@
+{{ if gt (len hugo.Sites) 1 }}
+{{ $page := .page }}
+{{ $mobile := .mobile | default false }}
+
+{{ $links := slice }}
+{{ range hugo.Sites }}
+  {{ $lang := .Language }}
+  {{ $url := "" }}
+  {{ range $page.AllTranslations }}
+    {{ if eq .Lang $lang.Lang }}
+      {{ $url = .RelPermalink }}
+    {{ end }}
+  {{ end }}
+  {{ if not $url }}
+    {{ $url = .Home.RelPermalink }}
+  {{ end }}
+  {{ $links = $links | append (dict "lang" $lang "url" $url) }}
+{{ end }}
+
+{{ if $mobile }}
+  <li class="menu-title text-xs">{{ T "chooseLanguage" }}</li>
+  {{ range $links }}
+    <li>
+      <a
+        class="inline-flex items-center gap-2 p-2 cursor-pointer{{ if eq .lang.Lang site.Language.Lang }} font-semibold{{ end }}"
+        href="{{ .url }}"
+        hreflang="{{ .lang.Lang }}"
+        lang="{{ .lang.Lang }}"
+        {{ if eq .lang.Lang site.Language.Lang }}aria-current="page"{{ end }}
+      >
+        {{ .lang.Label }}
+      </a>
+    </li>
+  {{ end }}
+{{ else }}
+  <div class="dropdown dropdown-end dropdown-hover">
+    <div
+      tabindex="0"
+      role="button"
+      class="group inline-flex items-center gap-2 px-3 py-2 rounded-full cursor-pointer hover:bg-primary"
+      aria-label="{{ T "chooseLanguage" }}"
+      title="{{ T "chooseLanguage" }}"
+    >
+      <ion-icon class="group-hover:text-primary-content text-xl shrink-0" name="globe-outline"></ion-icon>
+      <span class="group-hover:text-primary-content text-sm font-medium whitespace-nowrap">{{ T "chooseLanguage" }}</span>
+    </div>
+    <ul tabindex="0" class="dropdown-content menu w-40 bg-base-100 rounded-box z-1 shadow-xl">
+      {{ range $links }}
+        <li>
+          <a
+            href="{{ .url }}"
+            hreflang="{{ .lang.Lang }}"
+            lang="{{ .lang.Lang }}"
+            class="{{ if eq .lang.Lang site.Language.Lang }}active font-semibold{{ end }}"
+            {{ if eq .lang.Lang site.Language.Lang }}aria-current="page"{{ end }}
+          >
+            {{ .lang.Label }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+{{ end }}

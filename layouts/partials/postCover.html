@@ -1,0 +1,8 @@
+{{ if .Params.cover }}
+<figure>
+  {{ partial "renderCoverImage.html" (dict "page" . "imgClass" "z-30") }}
+  {{ with .Params.covercaption }}
+    <figcaption class="text-sm italic text-center mt-2">{{ . }}</figcaption>
+  {{ end }}
+</figure>
+{{ end }}

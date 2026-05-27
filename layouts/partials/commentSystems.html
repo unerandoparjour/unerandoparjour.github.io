@@ -1,0 +1,75 @@
+{{/* Utterances: best fit for GitHub Pages (uses GitHub Issues). Install https://github.com/apps/utterances */}}
+{{ if site.Params.utterancesRepo }}
+<article>
+  {{ if hugo.IsServer }}
+  <p class="text-sm text-base-content/60">Utterances comments are disabled during hugo server.</p>
+  {{ else }}
+  <script
+    src="https://utteranc.es/client.js"
+    repo="{{ site.Params.utterancesRepo }}"
+    issue-term="pathname"
+    label="comment"
+    theme="preferred-color-scheme"
+    crossorigin="anonymous"
+    async>
+  </script>
+  {{ end }}
+</article>
+{{ else if site.Config.Services.Disqus.Shortname }}
+<article>
+  {{ partial "disqus.html" (dict "Context" . "Identifier" .RelPermalink) }}
+</article>
+{{ end }}
+
+{{ if site.Params.valine }}
+<article>
+{{ if fileExists "layouts/partials/valine.html" }}
+  {{ partialCached "valine.html" . }}
+{{ else }}
+  <div id="vcomments"></div>
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: '{{ site.Params.LEANCLOUD_APP_ID }}',
+      appKey: '{{ site.Params.LEANCLOUD_APP_KEY }}'
+    })
+  </script>
+{{ end }}
+</article>
+{{ end }}
+
+{{ if site.Params.waline }}
+<article class="waline-comment">
+  {{ if hugo.IsServer }}
+  <p class="text-sm text-base-content/60">Waline comments need a live backend. Test on the deployed site after setting <code>walineServer</code> in config.</p>
+  {{ else if not site.Params.walineServer }}
+  <p class="text-sm text-error">Waline is enabled but <code>walineServer</code> is missing in <code>config.toml</code>.</p>
+  {{ else }}
+  {{ partial "waline.html" . }}
+  {{ end }}
+</article>
+{{ end }}
+
+{{ if site.Params.twikoo.enabled }}
+<article>
+{{ if fileExists "layouts/partials/twikoo.html" }}
+  {{ partialCached "twikoo.html" . }}
+{{ else }}
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.min.js"></script>
+  <script>
+    twikoo.init({
+      envId: {{ site.Params.twikoo.envID }},
+      el: '#tcomment',
+      {{ with site.Params.twikoo.region }}
+        region: {{ . }},
+      {{ end }}
+      path: {{ .RelPermalink }},
+      {{ with site.Params.twikoo.lang }}
+        lang: {{ . }},
+      {{ end }}
+    })
+  </script>
+{{ end }}
+</article>
+{{ end }}

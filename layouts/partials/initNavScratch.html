@@ -1,0 +1,20 @@
+{{ page.Scratch.Set "hasAbout" false }}
+{{ page.Scratch.Set "hasCategories" false }}
+{{ page.Scratch.Set "hasTags" false }}
+{{ range hugo.Sites }}
+  {{ with .GetPage "/about" }}
+    {{ if gt (len (.Resources.ByType "page")) 0 }}
+      {{ page.Scratch.Set "hasAbout" true }}
+    {{ end }}
+  {{ end }}
+  {{ with .Taxonomies.categories }}
+    {{ if gt (len .) 0 }}
+      {{ page.Scratch.Set "hasCategories" true }}
+    {{ end }}
+  {{ end }}
+  {{ with .Taxonomies.tags }}
+    {{ if gt (len .) 0 }}
+      {{ page.Scratch.Set "hasTags" true }}
+    {{ end }}
+  {{ end }}
+{{ end }}

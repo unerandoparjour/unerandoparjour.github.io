@@ -1,0 +1,31 @@
+{{- $server := site.Params.walineServer -}}
+{{- $walineLang := "fr-FR" -}}
+{{- if eq site.Language.Lang "en" -}}
+  {{- $walineLang = "en-US" -}}
+{{- else if eq site.Language.Lang "zh" -}}
+  {{- $walineLang = "zh-CN" -}}
+{{- end -}}
+<div
+  id="waline"
+  data-server="{{ $server | base64Encode }}"
+  data-path="{{ .RelPermalink }}"
+  data-lang="{{ $walineLang }}"
+></div>
+<script type="module">
+  import { init } from 'https://cdn.jsdelivr.net/npm/@waline/client@3/dist/waline.js';
+
+  const root = document.getElementById('waline');
+
+  init({
+    el: '#waline',
+    serverURL: atob(root.dataset.server),
+    path: root.dataset.path,
+    dark: 'html.dark',
+    lang: root.dataset.lang,
+    emoji: [
+      'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
+      'https://unpkg.com/@waline/emojis@1.2.0/weibo',
+    ],
+    requiredMeta: ['nick'],
+  });
+</script>

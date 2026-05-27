@@ -1,0 +1,36 @@
+{{- $pc := site.Config.Privacy.Disqus -}}
+{{- if not $pc.Disable -}}
+{{- if site.Config.Services.Disqus.Shortname -}}
+{{- $ctx := .Context -}}
+{{- $identifier := .Identifier -}}
+{{- if $ctx.File -}}
+  {{- $identifier = printf "posts/%s" (path.Base $ctx.File.Dir) -}}
+{{- end -}}
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.identifier = {{ $identifier | jsonify }};
+        this.page.title = {{ $ctx.Title | jsonify }};
+        this.page.url = {{ $ctx.Permalink | jsonify }};
+        {{ if eq .Identifier "/" }}
+        this.callbacks.onReady.push(function () {
+            if (window.aboutMasonry && window.aboutMasonry.layout) {
+                window.aboutMasonry.layout();
+            }
+        });
+        {{ end }}
+    };
+    {{ if hugo.IsServer }}
+    document.getElementById('disqus_thread').innerHTML = 'Disqus is disabled during hugo server. Deploy to GitHub Pages to test comments.';
+    {{ else }}
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{ site.Config.Services.Disqus.Shortname }}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    {{ end }}
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{{- end -}}
+{{- end -}}

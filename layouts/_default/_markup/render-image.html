@@ -1,0 +1,21 @@
+{{- $src := .Destination -}}
+{{- if not (strings.HasPrefix $src "http") -}}
+  {{- with .Page.Resources.GetMatch $src -}}
+    {{- $src = .RelPermalink -}}
+  {{- else -}}
+    {{- $src = .Destination | relURL -}}
+  {{- end -}}
+{{- end -}}
+{{- if .IsBlock -}}
+  <figure>
+    <img src="{{ $src | safeURL }}"
+      {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+    >
+    {{- with .Title }}<figcaption class="text-sm italic text-center mt-2">{{ . }}</figcaption>{{ end -}}
+  </figure>
+{{- else -}}
+  <img src="{{ $src | safeURL }}"
+    {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+    {{- with .Title }} title="{{ . }}"{{ end -}}
+  >
+{{- end -}}

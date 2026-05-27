@@ -1,0 +1,29 @@
+<a class="flex justify-between items-center gap-4" href="{{ .RelPermalink }}">
+  <div>
+    <h2 class="text-lg font-medium underline flex flex-wrap items-center gap-2">
+      {{ .Title }}
+      {{ if .Params.pin }}
+      <span class="badge badge-primary badge-sm font-normal">{{ T "pinned" }}</span>
+      {{ end }}
+    </h2>
+    <span class="date text-base-content/60 text-sm block mt-1">
+      {{ partial "postDates.html" . }}
+    </span>
+  </div>
+
+  {{ if .Params.cover }}
+  <figure>
+    {{ partial "renderCoverImage.html" (dict "page" . "imgClass" "w-24 max-w-none rounded-lg") }}
+  </figure>
+  {{ else if not site.Params.noDefaultSummaryCover }}
+  <figure>
+    {{ with resources.Get (printf "images/default%d.jpg" (index (seq 4 | shuffle) 0)) }}
+    {{ $webp := .Resize (printf "%dx%d webp" .Width .Height) }}
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp" />
+      <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+    </picture>
+    {{ end }}
+  </figure>
+  {{ end }}
+</a>
